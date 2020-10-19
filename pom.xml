@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.domgo</groupId>
+	<artifactId>domgo</artifactId>
+	<version>${domgo.version}</version>
+	<packaging>pom</packaging>
+	<name>domgo</name>
+
+	<modules>
+		<module>domgo-commons</module>
+		<module>domgo-user-service</module>
+		<module>domgo-web</module>
+		<module>domgo-entity</module>
+		<module>domgo-webflux</module>
+	</modules>
+
+	<properties>
+		<domgo.version>V1.0.0-SNAPSHOT</domgo.version>
+		<java.version>11</java.version>
+		<spring-boot.version>2.3.3.RELEASE</spring-boot.version>
+		<spring-cloud.version>Hoxton.SR8</spring-cloud.version>
+		<spring-cloud-alibaba.version>2.2.1.RELEASE</spring-cloud-alibaba.version>
+		<mybatis.version>2.1.2</mybatis.version>
+		<druid.version>1.1.23</druid.version>
+		<mysql.version>8.0.16</mysql.version>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${spring-boot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.alibaba.cloud</groupId>
+				<artifactId>spring-cloud-alibaba-dependencies</artifactId>
+				<version>${spring-cloud-alibaba.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.mybatis.spring.boot</groupId>
+				<artifactId>mybatis-spring-boot-starter</artifactId>
+				<version>${mybatis.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.domgo</groupId>
+				<artifactId>domgo-commons</artifactId>
+				<version>${domgo.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.domgo</groupId>
+				<artifactId>domgo-entity</artifactId>
+				<version>${domgo.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.domgo</groupId>
+				<artifactId>domgo-user-service</artifactId>
+				<version>${domgo.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.domgo</groupId>
+				<artifactId>domgo-webflux</artifactId>
+				<version>${domgo.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.domgo</groupId>
+				<artifactId>domgo-web</artifactId>
+				<version>${domgo.version}</version>
+			</dependency>
+			<dependency>
+	            <groupId>com.alibaba</groupId>
+	            <artifactId>druid-spring-boot-starter</artifactId>
+	            <version>${druid.version}</version>
+        	</dependency>
+        	<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+			<dependency>
+			    <groupId>mysql</groupId>
+			    <artifactId>mysql-connector-java</artifactId>
+			    <version>${mysql.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<fork>true</fork>
+					<addResources>true</addResources>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
