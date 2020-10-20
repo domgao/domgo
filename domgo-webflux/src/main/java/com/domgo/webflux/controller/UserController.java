@@ -1,7 +1,7 @@
 package com.domgo.webflux.controller;
 
-import com.domgo.entity.nosql.User;
-import com.domgo.entity.nosql.vo.UserVo;
+import com.domgo.webflux.domain.User;
+import com.domgo.webflux.domain.UserVo;
 import com.domgo.webflux.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

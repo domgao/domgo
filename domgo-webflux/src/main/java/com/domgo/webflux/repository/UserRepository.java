@@ -1,8 +1,10 @@
 package com.domgo.webflux.repository;
 
-import com.domgo.entity.nosql.User;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.stereotype.Repository;
+
+import com.domgo.webflux.domain.User;
+
 import reactor.core.publisher.Flux;
 
 /**

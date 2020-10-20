@@ -1,0 +1,17 @@
+server:
+  port: 8002
+
+spring:
+  application:
+    name: domgo-video-service
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://106.54.33.142:3306/domgo_video?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: root
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true

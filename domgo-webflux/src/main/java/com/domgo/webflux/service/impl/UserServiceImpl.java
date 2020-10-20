@@ -1,6 +1,6 @@
 package com.domgo.webflux.service.impl;
 
-import com.domgo.entity.nosql.User;
+import com.domgo.webflux.domain.User;
 import com.domgo.webflux.repository.UserRepository;
 import com.domgo.webflux.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

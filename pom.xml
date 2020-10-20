@@ -16,6 +16,7 @@
 		<module>domgo-web</module>
 		<module>domgo-entity</module>
 		<module>domgo-webflux</module>
+		<module>domgo-video</module>
 	</modules>
 
 	<properties>

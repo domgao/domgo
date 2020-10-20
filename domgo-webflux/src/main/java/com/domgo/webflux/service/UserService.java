@@ -1,6 +1,7 @@
 package com.domgo.webflux.service;
 
-import com.domgo.entity.nosql.User;
+import com.domgo.webflux.domain.User;
+
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
