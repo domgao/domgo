@@ -1,13 +1,0 @@
-server:
-  port: 8000
-  
-spring:  application:    name: domgo-user
-    
-  datasource:    driver-class-name: 
-    url: jdbc:mysql://106.54.33.142:3306/domgo?useUnicode=true&characterEncoding=utf-8&useSSL=false
-    username: root
-    password: root
-    
-
-mybatis:  configuration:    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-    map-underscore-to-camel-case: true
