@@ -37,8 +37,8 @@ public class OrderController {
     	//ServiceInstance serviceInstance = list.get(0);
     	//Video video = restTemplate.getForObject("http://" + serviceInstance.getHost() + ":" + serviceInstance.getPort() + "/api/v1/video/find_by_id?videoId="+videoId, Video.class);
     	
-    	Video video = restTemplate.getForObject("http://domgo-video-service/api/v1/video/find_by_id?videoId="+videoId, Video.class);
-    	
+    	//Video video = restTemplate.getForObject("http://domgo-video-service/api/v1/video/find_by_id?videoId="+videoId, Video.class);
+    	Video video = videoService.findById(videoId);
         VideoOrder videoOrder = new VideoOrder();
         videoOrder.setVideoId(video.getId());
         videoOrder.setVideoTitle(video.getTitle());
