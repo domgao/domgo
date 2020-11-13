@@ -5,7 +5,7 @@ spring:
   application:
     name: domgo-order-service
   cloud:    nacos:      discovery:        server-addr: 106.54.33.142:8848
-    sentinel:      transport:        dashboard: 106.54.33.142:6262
+    sentinel:      transport:        dashboard: 127.0.0.1:6262
         port: 9999
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
