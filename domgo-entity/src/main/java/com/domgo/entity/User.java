@@ -1,15 +1,20 @@
 package com.domgo.entity;
 
-import java.util.Date;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
+@Document
 public class User {
 
+	@Id
     private Integer id;
     private String name;
     private String pwd;
+    @Field("head_img")
     private String headImg;
     private String phone;
-    private Date createTime;
+    //private Date createTime;
     private String wechat;
 
     public Integer getId() {
@@ -52,13 +57,13 @@ public class User {
         this.phone = phone;
     }
 
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
+//    public Date getCreateTime() {
+//        return createTime;
+//    }
+//
+//    public void setCreateTime(Date createTime) {
+//        this.createTime = createTime;
+//    }
 
     public String getWechat() {
         return wechat;
