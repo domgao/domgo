@@ -25,7 +25,7 @@ public class DataSourceConfig {
 
 	@Bean(name = "masterDataSource")
 	@Primary
-	@ConfigurationProperties(prefix = "spring.datasource.write")
+	@ConfigurationProperties(prefix = "spring.datasource.druid.write")
 	public DataSource masterDataSource() {
 		DataSource masterDataSource = DataSourceBuilder.create().type(type).build();
 		log.info("======Write DataBase {}======", masterDataSource);
@@ -33,7 +33,7 @@ public class DataSourceConfig {
 	}
 
 	@Bean(name = "slaveDataSource")
-	@ConfigurationProperties(prefix = "spring.datasource.read")
+	@ConfigurationProperties(prefix = "spring.datasource.druid.read")
 	public DataSource slaveDataSource() {
 		DataSource slaveDataSource = DataSourceBuilder.create().type(type).build();
 		log.info("======Read DataBase {}======", slaveDataSource);
