@@ -12,7 +12,6 @@
 
 	<modules>
 		<module>domgo-commons</module>
-		<module>domgo-user-service</module>
 		<module>domgo-web</module>
 		<module>domgo-entity</module>
 		<module>domgo-webflux</module>
@@ -71,11 +70,6 @@
 			<dependency>
 				<groupId>com.domgo</groupId>
 				<artifactId>domgo-entity</artifactId>
-				<version>${domgo.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.domgo</groupId>
-				<artifactId>domgo-user-service</artifactId>
 				<version>${domgo.version}</version>
 			</dependency>
 			<dependency>
