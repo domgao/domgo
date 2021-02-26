@@ -77,7 +77,7 @@ public class RabbitConfig {
 		//消息过期后，进入到死信交换机的路由key
 		args.put("x-dead-letter-routing-key", DEAD_ROUTER_KEY);
 		//过期时间，单位毫秒
-		args.put("x-message-ttl", 10000);
+		args.put("x-message-ttl", 20000);
 		return new Queue(UNDEAD_QUEUE, true, false, false, args);
 	}
 	

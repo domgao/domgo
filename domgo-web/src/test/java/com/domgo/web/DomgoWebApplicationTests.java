@@ -24,6 +24,11 @@ public class DomgoWebApplicationTests {
 		rabbitTemplate.convertAndSend(RabbitConfig.DEFAULT_EXCHANGE, "default.msg", "测试mq消息发送");
 	}
 	
+	@Test
+	public void testUNDeadSend() {
+		rabbitTemplate.convertAndSend(RabbitConfig.UNDEAD_EXCHANGE, RabbitConfig.UNDEAD_ROUTER_KEY, "测试time-to-live-mq消息发送");
+	}
+	
 	
 	
 	@Test
